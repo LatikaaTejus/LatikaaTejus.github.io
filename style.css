@@ -193,3 +193,47 @@ h1, h2 {
   font-size: 15px;
   color: #444;
 }
+
+#experience {
+  background-color: transparent;
+  padding: 40px 20px;
+}
+
+#experience h2 {
+  color: #556b2f;
+  margin-bottom: 20px;
+}
+
+.exp-item {
+  background-color: #fffef8;
+  border-left: 4px solid #556b2f;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.exp-item h3 {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 18px;
+}
+
+.exp-item p {
+  margin: 2px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.exp-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.exp-item li {
+  margin-bottom: 6px;
+  font-size: 14.5px;
+  color: #444;
+  line-height: 1.6;
+}
+
