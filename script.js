@@ -23,3 +23,12 @@ function openLightbox(src) {
 function closeLightbox() {
   document.getElementById('lightbox').style.display = 'none';
 }
+
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
