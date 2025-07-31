@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://public.tableau.com/app/profile/YOUR_USERNAME" target="_blank">Tableau Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Profile Image -->
+  <img src="profile.jpg" alt="Your Photo" class="profile-pic" />
+
+  <!-- Page Sections -->
+  <main class="content">
+    <section id="home"><h1>Your Name</h1><p>Intro placeholder</p></section>
+    <section id="about"><h2>About Me</h2><p>Bio placeholder</p></section>
+    <section id="skills"><h2>Skills</h2><p>Skills list placeholder</p></section>
+    <section id="projects"><h2>Projects</h2><p>Project cards placeholder</p></section>
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="certificate-grid">
+        <div class="cert">
+          <img src="https://drive.google.com/uc?export=view&id=YOUR_FILE_ID" alt="Certificate" onclick="openLightbox(this.src)" />
+          <p>Certificate Name</p>
+        </div>
+        <!-- Add more certs similarly -->
+      </div>
+    </section>
+    <section id="experience"><h2>Experience</h2><p>Timeline placeholder</p></section>
+    <section id="education"><h2>Education</h2><p>Education details</p></section>
+    <section id="contact"><h2>Contact</h2><p>Email, LinkedIn, etc.</p></section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
