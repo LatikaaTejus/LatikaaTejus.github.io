@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fefce8;
+  color: #1c1917;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #556b2f;
+  color: white;
+  width: 200px;
+  height: 100vh;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #556b2f;
+  color: white;
+  text-align: center;
+}
+
+.profile-pic {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #556b2f;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 30px;
+}
+
+section {
+  padding: 50px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.certificate-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cert {
+  width: 150px;
+  text-align: center;
+}
+
+.cert img {
+  width: 100%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .sidebar.open ul {
+    display: flex;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .profile-pic {
+    position: static;
+    display: block;
+    margin: 20px auto;
+  }
+}
