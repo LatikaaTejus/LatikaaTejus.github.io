@@ -164,3 +164,32 @@ h1, h2 {
   margin-bottom: 6px;
 }
 
+#education {
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+#education h2 {
+  color: #556b2f;
+  margin-bottom: 20px;
+}
+
+.edu-item {
+  background-color: #fdfaf3;
+  border-left: 4px solid #556b2f;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.edu-item h3 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.edu-item p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #444;
+}
