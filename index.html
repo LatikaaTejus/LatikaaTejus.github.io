@@ -117,6 +117,37 @@
 </section>
 
     <section id="projects"><h2>Projects</h2><p>Project cards placeholder</p></section>
+
+    <section id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="cert-item" onclick="openModal('cert1')">
+    <img src="certificate-logo1.png" alt="Certificate Logo" class="cert-logo" />
+    <span>Google Data Analytics – Coursera</span>
+  </div>
+
+  <div class="cert-item" onclick="openModal('cert2')">
+    <img src="certificate-logo2.png" alt="Certificate Logo" class="cert-logo" />
+    <span>Python for Data Science – IBM</span>
+  </div>
+
+  <!-- Certificate Popups -->
+  <div id="cert1" class="modal" onclick="closeModal('cert1')">
+    <span class="close-btn">×</span>
+    <img src="cert1-full.jpg" class="modal-content" />
+  </div>
+
+  <div id="cert2" class="modal" onclick="closeModal('cert2')">
+    <span class="close-btn">×</span>
+    <img src="cert2-full.jpg" class="modal-content" />
+  </div>
+</section>
+
+
+
+
+    
+
     <section id="certificates">
       <h2>Certificates</h2>
       <div class="certificate-grid">
@@ -127,6 +158,11 @@
         <!-- Add more certs similarly -->
       </div>
     </section>
+
+
+
+
+    
 
     <section id="experience">
   <h2>Experience</h2>
@@ -207,4 +243,18 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LMMZ0DY9FW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LMMZ0DY9FW');
+</script>
+
+
+  </head>
 
