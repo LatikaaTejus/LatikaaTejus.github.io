@@ -18,10 +18,12 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#" onclick="openBadgeModal()">Badges</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="https://public.tableau.com/app/profile/YOUR_USERNAME" target="_blank"> https://public.tableau.com/app/profile/latikaa.tejus.j/vizzes </a></li>
+      <li><a href="https://public.tableau.com/app/profile/latikaa.tejus.j/vizzes" target="_blank">Tableau Profile</a></li>
+
     </ul>
   </nav>
 
@@ -246,4 +248,26 @@
 
 
   </head>
+
+<!-- Badges Modal -->
+<div id="badgeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeBadgeModal()">&times;</span>
+    <h2>Professional Badges</h2>
+    <div class="badge-grid">
+      <a href="https://www.credential.net/your-google-badge" target="_blank">
+        <img src="google.png" alt="Google Badge" />
+        <p>Google Certified</p>
+      </a>
+      <a href="https://www.credly.com/users/your-profile" target="_blank">
+        <img src="credly.png" alt="Credly Badge" />
+        <p>Credly Verified</p>
+      </a>
+      <a href="https://learn.microsoft.com/your-microsoft-badge" target="_blank">
+        <img src="microsoft.png" alt="Microsoft Badge" />
+        <p>Microsoft Certified</p>
+      </a>
+    </div>
+  </div>
+</div>
 
