@@ -28,6 +28,23 @@ function openModal(id) {
   document.getElementById(id).style.display = "block";
 }
 
+function openBadgeModal() {
+  document.getElementById('badgeModal').style.display = 'block';
+}
+
+function closeBadgeModal() {
+  document.getElementById('badgeModal').style.display = 'none';
+}
+
+// Optional: close when clicking outside modal
+window.onclick = function(event) {
+  const modal = document.getElementById('badgeModal');
+  if (event.target === modal) {
+    closeBadgeModal();
+  }
+}
+
+
 function closeModal(id) {
   document.getElementById(id).style.display = "none";
 }
