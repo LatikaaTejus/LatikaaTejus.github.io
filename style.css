@@ -403,6 +403,9 @@ h1, h2 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-color: #6a994e; /* darker olive on hover */
 }
+#projects {
+  margin-top: 40px;
+}
 
 
 
