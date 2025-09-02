@@ -395,3 +395,45 @@ h1, h2 {
   font-size: 15px;
   color: #333;
 }
+
+
+
+/* Common style for Tableau & Badges (same as projects) */
+#tableau, #badges {
+  background-color: transparent;
+  padding: 40px 20px;
+}
+
+#tableau h2, #badges h2 {
+  color: #556b2f;
+  margin-bottom: 20px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #fffef8;
+  border-left: 4px solid #556b2f;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.link-item:hover {
+  background-color: #f4f4ea;
+}
+
+.link-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.link-item span {
+  font-size: 15px;
+  color: #333;
+}
