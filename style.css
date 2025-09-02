@@ -653,4 +653,21 @@ h1, h2 {
   transform: scale(1.2);
 }
 
+.badge-box {
+  display: inline-block;
+  padding: 15px 25px;
+  margin-top: 15px;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.badge-box:hover {
+  background: #e6f0ff;
+  border-color: #4285f4;
+  transform: scale(1.05);
+}
 
