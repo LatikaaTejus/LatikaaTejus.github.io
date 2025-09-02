@@ -49,3 +49,13 @@ function closeModal(id) {
   document.getElementById(id).style.display = "none";
 }
 
+<script>
+  const modal = document.getElementById("badgesModal");
+  const openBtn = document.getElementById("openBadges");
+  const closeBtn = document.getElementById("closeBadges");
+
+  openBtn.onclick = () => modal.style.display = "flex";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+</script>
+
