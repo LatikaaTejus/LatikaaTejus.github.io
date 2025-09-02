@@ -50,17 +50,11 @@ function closeModal(id) {
 }
 
 <script>
-function openBadgeModal() {
-  document.getElementById("badgeModal").style.display = "flex";
-}
-function closeBadgeModal() {
-  document.getElementById("badgeModal").style.display = "none";
-}
-// Close modal when clicking outside
-window.onclick = function(event) {
-  let modal = document.getElementById("badgeModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+    const modal = document.getElementById("badgeModal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+
+    openModal.onclick = () => modal.style.display = "flex";
+    closeModal.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; }
+  </script>
