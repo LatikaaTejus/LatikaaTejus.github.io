@@ -357,21 +357,16 @@ h1, h2 {
 }
 
 /* Projects Section */
-
-/* Projects Section */
 #projects {
   background-color: transparent;
   padding: 40px 20px;
-  margin-top: 40px;
 }
 
 #projects h2 {
-  font-size: 2rem;
+  color: #556b2f;
   margin-bottom: 20px;
-  color: #556b2f; /* same olive green as other headings */
 }
 
-/* Each project item looks like certificate item */
 .project-item {
   display: flex;
   align-items: center;
@@ -382,6 +377,7 @@ h1, h2 {
   margin-bottom: 15px;
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
   transition: background 0.2s;
 }
 
@@ -389,7 +385,6 @@ h1, h2 {
   background-color: #f4f4ea;
 }
 
-/* Optional project logo/icon */
 .project-logo {
   height: 40px;
   width: 40px;
