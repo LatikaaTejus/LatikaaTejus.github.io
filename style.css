@@ -437,3 +437,93 @@ h1, h2 {
   font-size: 15px;
   color: #333;
 }
+
+
+/* Section Styling */
+#badges {
+  background-color: transparent;
+  padding: 40px 20px;
+}
+
+#badges h2 {
+  color: #556b2f;
+  margin-bottom: 20px;
+}
+
+/* Badge Box */
+.badge-box {
+  display: inline-block;
+  background-color: #fffef8;
+  border-left: 4px solid #556b2f;
+  padding: 15px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 15px;
+  color: #333;
+}
+
+.badge-box:hover {
+  background-color: #f4f4ea;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fffef8;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  border: 2px solid #556b2f;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #556b2f;
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #556b2f;
+}
+
+/* Badge Logos in Modal */
+.badge-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.badge-logos img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.badge-logos img:hover {
+  transform: scale(1.1);
+}
+
