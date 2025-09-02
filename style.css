@@ -621,3 +621,36 @@ h1, h2 {
 </head>
 <body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.badge-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.badge-logos img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.badge-logos img:hover {
+  transform: scale(1.2);
+}
+
+
