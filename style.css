@@ -70,16 +70,7 @@ h1, h2, h3 {
 }
 
 /* Profile Picture */
-.profile-pic {
-  display: block;
-  margin: 20px auto;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid #c5c59d;
-  object-fit: cover;
-}
-
+ 
 /* ------------------------
    Sections
 ------------------------- */
@@ -272,4 +263,26 @@ section {
     margin-left: 0;
     padding: 15px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.project-item a {
+  text-decoration: none;  /* removes underline */
+  color: #333;           /* keeps text dark */
+  font-weight: bold;     /* keeps bold style */
+}
+
+.project-item a:hover {
+  color: #556b2f;        /* hover effect */
+  text-decoration: none; /* prevent underline on hover */
 }
