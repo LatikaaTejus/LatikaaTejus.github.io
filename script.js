@@ -69,3 +69,22 @@ window.onclick = function(event) {
     }
   });
 };
+
+
+
+
+// Sidebar toggle for mobile
+const menuToggle = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("sidebar");
+
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+// Auto close sidebar when clicking a link (mobile)
+document.querySelectorAll(".sidebar a").forEach(link => {
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+  });
+});
+
