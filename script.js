@@ -1,4 +1,6 @@
-// Smooth scroll
+/* ------------------------
+   Smooth Scroll for Links
+------------------------- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -9,12 +11,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Toggle mobile menu
+/* ------------------------
+   Sidebar Mobile Toggle
+------------------------- */
 function toggleMenu() {
-  document.querySelector('.sidebar').classList.toggle('open');
+  document.querySelector('.sidebar').classList.toggle('active');
 }
 
-// Lightbox functions
+/* ------------------------
+   Lightbox Functions (for certificates)
+------------------------- */
 function openLightbox(src) {
   document.getElementById('lightbox-img').src = src;
   document.getElementById('lightbox').style.display = 'flex';
@@ -24,10 +30,20 @@ function closeLightbox() {
   document.getElementById('lightbox').style.display = 'none';
 }
 
+/* ------------------------
+   Certificate Modals
+------------------------- */
 function openModal(id) {
   document.getElementById(id).style.display = "block";
 }
 
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+/* ------------------------
+   Badge Modal
+------------------------- */
 function openBadgeModal() {
   document.getElementById('badgeModal').style.display = 'block';
 }
@@ -36,25 +52,20 @@ function closeBadgeModal() {
   document.getElementById('badgeModal').style.display = 'none';
 }
 
-// Optional: close when clicking outside modal
+/* ------------------------
+   Close when clicking outside modal
+------------------------- */
 window.onclick = function(event) {
-  const modal = document.getElementById('badgeModal');
-  if (event.target === modal) {
+  const badgeModal = document.getElementById('badgeModal');
+  if (event.target === badgeModal) {
     closeBadgeModal();
   }
-}
 
-
-function closeModal(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-<script>
-    const modal = document.getElementById("badgeModal");
-    const openModal = document.getElementById("openModal");
-    const closeModal = document.getElementById("closeModal");
-
-    openModal.onclick = () => modal.style.display = "flex";
-    closeModal.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; }
-  </script>
+  // Close any certificate modal if click outside
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(m => {
+    if (event.target === m) {
+      m.style.display = "none";
+    }
+  });
+};
