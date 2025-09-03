@@ -283,3 +283,40 @@ section {
   color: #4f6f52;         /* lighter green */
   text-decoration: none;
 }
+
+
+html {
+  scroll-behavior: smooth; /* enables auto smooth scrolling */
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  padding: 10px 15px;
+  color: #3a4d39;
+  background: #fdfbea;
+  border: 1px solid #d9e0d0;
+  border-radius: 6px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 10000;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .content {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
