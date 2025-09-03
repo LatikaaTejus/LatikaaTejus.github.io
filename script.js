@@ -88,3 +88,29 @@ document.querySelectorAll(".sidebar a").forEach(link => {
   });
 });
 
+
+// Sidebar toggle for mobile
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar    = document.getElementById('sidebar');
+const backdrop   = document.getElementById('backdrop');
+
+function closeSidebar() {
+  sidebar.classList.remove('active');
+}
+
+menuToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
+
+// Close when clicking a nav link
+document.querySelectorAll('.sidebar a').forEach(a => {
+  a.addEventListener('click', closeSidebar);
+});
+
+// Close when clicking outside (backdrop)
+backdrop.addEventListener('click', closeSidebar);
+
+// Close on ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeSidebar();
+});
