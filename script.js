@@ -114,3 +114,16 @@ backdrop.addEventListener('click', closeSidebar);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeSidebar();
 });
+
+
+
+// Open Badges Modal
+function openBadgeModal() {
+  document.getElementById("badgeModal").style.display = "block";
+}
+
+// Close Badges Modal
+function closeBadgeModal() {
+  document.getElementById("badgeModal").style.display = "none";
+}
+
