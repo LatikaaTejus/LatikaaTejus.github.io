@@ -380,3 +380,27 @@ html { scroll-behavior: smooth; }
 .sidebar.active ~ .backdrop { display: block; }
 
 /* (keep your existing styles below) */
+
+
+
+
+
+
+
+/* ------------------------
+   Badge Modal Custom Content
+------------------------- */
+#badgeModal .modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+#badgeModal h3 {
+  margin-top: 0;
+  color: #3a4d39;
+}
+
