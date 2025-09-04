@@ -45,21 +45,34 @@ function closeModal(id) {
    Badge Modal
 ------------------------- */
 function openBadgeModal() {
-  document.getElementById('badgeModal').style.display = 'block';
+  const badgeModal = document.getElementById('badgeModal');
+  badgeModal.style.display = 'block';
 }
 
 function closeBadgeModal() {
-  document.getElementById('badgeModal').style.display = 'none';
+  const badgeModal = document.getElementById('badgeModal');
+  badgeModal.style.display = 'none';
 }
 
 /* ------------------------
    Close when clicking outside modal
 ------------------------- */
 window.onclick = function(event) {
+  // Badges
   const badgeModal = document.getElementById('badgeModal');
   if (event.target === badgeModal) {
     closeBadgeModal();
   }
+
+  // Certificates
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(m => {
+    if (event.target === m && m.id !== "badgeModal") {
+      m.style.display = "none";
+    }
+  });
+};
+
 
   // Close any certificate modal if click outside
   const modals = document.querySelectorAll('.modal');
