@@ -14,12 +14,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* ------------------------
    Sidebar Mobile Toggle
 ------------------------- */
-function toggleMenu() {
-  document.querySelector('.sidebar').classList.toggle('active');
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const backdrop = document.getElementById('backdrop');
+
+function closeSidebar() {
+  sidebar.classList.remove('active');
 }
 
+menuToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
+
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', closeSidebar);
+});
+
+backdrop.addEventListener('click', closeSidebar);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeSidebar();
+    closeAllModals();
+  }
+});
+
 /* ------------------------
-   Lightbox Functions (for certificates)
+   Lightbox for Certificates
 ------------------------- */
 function openLightbox(src) {
   document.getElementById('lightbox-img').src = src;
@@ -31,112 +52,48 @@ function closeLightbox() {
 }
 
 /* ------------------------
-   Certificate Modals
+   Generic Modal Functions
 ------------------------- */
 function openModal(id) {
-  document.getElementById(id).style.display = "block";
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'block';
 }
 
 function closeModal(id) {
-  document.getElementById(id).style.display = "none";
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'none';
 }
 
 /* ------------------------
    Badge Modal
 ------------------------- */
 function openBadgeModal() {
-  const badgeModal = document.getElementById('badgeModal');
-  badgeModal.style.display = 'block';
+  openModal('badgeModal');
 }
 
 function closeBadgeModal() {
-  const badgeModal = document.getElementById('badgeModal');
-  badgeModal.style.display = 'none';
+  closeModal('badgeModal');
 }
 
 /* ------------------------
-   Close when clicking outside modal
+   Close Modals when clicking outside
 ------------------------- */
-window.onclick = function(event) {
-  // Badges
+window.addEventListener('click', function(event) {
+  // Close badge modal if clicked outside
   const badgeModal = document.getElementById('badgeModal');
-  if (event.target === badgeModal) {
-    closeBadgeModal();
-  }
+  if (event.target === badgeModal) closeBadgeModal();
 
-  // Certificates
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(m => {
-    if (event.target === m && m.id !== "badgeModal") {
-      m.style.display = "none";
-    }
-  });
-};
-
-
-  // Close any certificate modal if click outside
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(m => {
-    if (event.target === m) {
-      m.style.display = "none";
-    }
-  });
-};
-
-
-
-
-// Sidebar toggle for mobile
-const menuToggle = document.getElementById("menu-toggle");
-const sidebar = document.getElementById("sidebar");
-
-menuToggle.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-});
-
-// Auto close sidebar when clicking a link (mobile)
-document.querySelectorAll(".sidebar a").forEach(link => {
-  link.addEventListener("click", () => {
-    sidebar.classList.remove("active");
+  // Close all other modals
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) modal.style.display = 'none';
   });
 });
 
-
-// Sidebar toggle for mobile
-const menuToggle = document.getElementById('menu-toggle');
-const sidebar    = document.getElementById('sidebar');
-const backdrop   = document.getElementById('backdrop');
-
-function closeSidebar() {
-  sidebar.classList.remove('active');
+/* ------------------------
+   Utility: Close all modals
+------------------------- */
+function closeAllModals() {
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.style.display = 'none';
+  });
 }
-
-menuToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-});
-
-// Close when clicking a nav link
-document.querySelectorAll('.sidebar a').forEach(a => {
-  a.addEventListener('click', closeSidebar);
-});
-
-// Close when clicking outside (backdrop)
-backdrop.addEventListener('click', closeSidebar);
-
-// Close on ESC
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeSidebar();
-});
-
-
-
-// Open Badges Modal
-function openBadgeModal() {
-  document.getElementById("badgeModal").style.display = "block";
-}
-
-// Close Badges Modal
-function closeBadgeModal() {
-  document.getElementById("badgeModal").style.display = "none";
-}
-
